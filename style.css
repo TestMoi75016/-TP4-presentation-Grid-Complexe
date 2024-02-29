@@ -1,0 +1,56 @@
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: rgb(194, 188, 188);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+   "a a b"
+   "c d b"
+   "c e e";
+  
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100vh;
+  
+}
+
+div:nth-child(1) {
+  background: yellow;
+  grid-area: a;
+  
+}
+div:nth-child(2) {
+  background: purple;
+  grid-area: b;
+
+}
+div:nth-child(3) {
+  background: green;
+  grid-area: d;
+  
+}
+div:nth-child(4) {
+  background: red;
+  grid-area: c;
+
+}
+div:nth-child(5) {
+  background: orchid;
+  grid-area: e;
+ 
+}
+
+div:nth-child(odd) { /* Se réfère à toutes class div impaires*/
+  margin: 15px;
+}
+
+div:nth-child(even) { /* Se réfère à toutes class div paires*/
+  margin: 15px;
+}
